@@ -1,6 +1,6 @@
-# Code & Data for "A Theory of Countercyclical Government Multiplier"
+# A Theory of Countercyclical Government Multiplier: Code and Data
 
-This repository contains the code and data associated with the article ["A Theory of Countercyclical Government Multiplier"](https://www.pascalmichaillat.org/2.html), written by [Pascal Michaillat](https://www.pascalmichaillat.org), and published in the [American Economic Journal: Macroeconomics](https://doi.org/10.1257/mac.6.1.190) in January 2014.
+This repository contains the code and data accompanying the article ["A Theory of Countercyclical Government Multiplier"](https://pascalmichaillat.org/2/), written by [Pascal Michaillat](https://pascalmichaillat.org), and published in the [American Economic Journal: Macroeconomics](https://doi.org/10.1257/mac.6.1.190) in January 2014.
 
 ## Data
 
@@ -60,9 +60,13 @@ The following Matlab script computes the cumulative multipliers that are discuss
 
 * `plotcumulativeB.m` -  compute cumulative multipliers when public employment is a constant fraction of private employment; the cumulative multipliers are displayed in Figure B1
 
-## Software versions
+## Software
 
 The results were obtained on a Mac running OS X Mountain Lion with the following software:
 
 * Matlab R2012a
 * Dynare 4.2.5
+
+## License
+
+The content of this repository is licensed under the terms of the MIT License.
