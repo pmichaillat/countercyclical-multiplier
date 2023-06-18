@@ -8,68 +8,76 @@ The paper is available at https://pascalmichaillat.org/2/.
 
 ## Data
 
-The folder `data` contains publicly available datasets obtained from the Bureau of Labor Statistics (BLS) and used to calibrate the model. The datasets describe the following labor market variables:
+The folder `data` contains the datasets used to calibrate the paper's model. The datasets are constructed by the Bureau of Labor Statistics (BLS) and are publicly available. The datasets describe the following labor market variables:
 
-* `CPS-UL-2012.txt` – Unemployment level from the Current Population Survey (CPS)
-* `CPS-UR-2012.txt` – Unemployment rate from CPS
-* `MSPC-EMP-2012.txt` – Employment level from Major Sector Productivity and
++ `CPS-UL-2012.txt` – Unemployment level from the Current Population Survey (CPS)
++ `CPS-UR-2012.txt` – Unemployment rate from CPS
++ `MSPC-EMP-2012.txt` – Employment level from Major Sector Productivity and
 Costs (MSPC)
-* `MSPC-OUTPUT-2012.txt` – Output level from MSPC
-* `JOLTS-JOLNF-2012.txt` – Job-opening level in the nonfarm business sector from
++ `MSPC-OUTPUT-2012.txt` – Output level from MSPC
++ `JOLTS-JOLNF-2012.txt` – Job-opening level in the nonfarm business sector from
 the Job Opening and Labor Turnover Survey (JOLTS)
-* `JOLTS-TSRNF-2012.txt` – Total separation rate in the nonfarm business sector
++ `JOLTS-TSRNF-2012.txt` – Total separation rate in the nonfarm business sector
 from JOLTS
-* `CES-EMPNF-2012.txt` – Employment level in the nonfarm supersector from the
++ `CES-EMPNF-2012.txt` – Employment level in the nonfarm supersector from the
 Current Employment Survey (CES)
-* `CES-EMPPRIV-2012.txt` – Employment level in the private supersector from
++ `CES-EMPPRIV-2012.txt` – Employment level in the private supersector from
 CES
-* `CES-EMPGOV-2012.txt` – Employment level in the government supersector
++ `CES-EMPGOV-2012.txt` – Employment level in the government supersector
 from the CES
 
 The readme files `CES_README.txt`, `CPS_README.txt`, `MSPC_README.txt`, and `JOLTS_README.txt` provide details on the data.
 
 ## Code
 
-The results are produced with Matlab and Dynare code.
+The paper's results are produced with MATLAB and Dynare code.
 
 ### Dynare scripts
 
-The simulations of the New Keynesian model rely on a number of Dynare scripts, which are directly called by Matlab scripts. The Dynare scripts simulate the calibrated New Keynesian model in response to a given technology shock, with or without a public-employment response, for different underlying public-employment policies. The typical script is called `modelWxYZ.mod`, where
+The simulations of the New Keynesian model rely on a number of Dynare scripts, which are directly called by MATLAB scripts. The Dynare scripts simulate the calibrated New Keynesian model in response to a given technology shock, with or without a public-employment response, for different underlying public-employment policies. The typical script is called `modelWxYZ.mod`, where
 
-* `W` = `NK` is there is no public-employment response, and `W` = `G` if there is a public- employment response simultaneously to the technology shock.
-* `x` = `m` if the technology shock is negative, and `x` = ` `  if the technology shock is positive.
-* `Y` = `1`, `3`, `5`, `7`, `9`, `11`, `13`, `17`, `21` indicates the amplitude of the technology shock.
-* `Z` = `G` if the underlying government policy is to keep public employment at a
++ `W` = `NK` is there is no public-employment response, and `W` = `G` if there is a public- employment response simultaneously to the technology shock.
++ `x` = `m` if the technology shock is negative, and `x` = ` `  if the technology shock is positive.
++ `Y` = `1`, `3`, `5`, `7`, `9`, `11`, `13`, `17`, `21` indicates the amplitude of the technology shock.
++ `Z` = `G` if the underlying government policy is to keep public employment at a
 constant level over time, and `Z` = `B` is the underlying government policy is to keep
 public employment at a constant fraction of private employment over time.
 
-### Matlab helper functions
+### MATLAB helper functions
 
-The Matlab scripts also call the following Matlab helper functions:
+The MATLAB scripts also call the following MATLAB helper functions:
 
-* `BLS.m` – Compute the average of key labor market variables in US data for the 2001–2011 period
-* `STEADYB.m` – Compute the steady state of the calibrated New Keynesian model
-* `SETUPB.m` – Calibrate the parameters of the New Keynesian model, as summarized in Table 2
++ `BLS.m` – Compute the average of key labor market variables in US data for the 2001–2011 period
++ `STEADYB.m` – Compute the steady state of the calibrated New Keynesian model
++ `SETUPB.m` – Calibrate the parameters of the New Keynesian model, as summarized in Table 2
 
-### Matlab scripts
+### MATLAB scripts
 
-The following Matlab scripts compute the simulations discussed in the article and plot the results. These Matlab scripts call the Dynare scripts that simulate the calibrated New Keynesian model in response to a given technology shock, with or without a public-employment response, when the underlying level of public employment is constant.
+The following MATLAB scripts compute the simulations discussed in the article and plot the results. These MATLAB scripts call the Dynare scripts that simulate the calibrated New Keynesian model in response to a given technology shock, with or without a public-employment response, when the underlying level of public employment is constant.
 
-* `plotirfdispeG.m` – Compute the impulse response functions to a positive technology shock with and without a public-employment response. Also compute the corresponding instantaneous multiplier. Impulse response functions are displayed in Figure 2. Instantaneous multiplier is displayed in Figure 4(a).
-* `plotirfdisprG.m` – Compute the impulse response functions to a negative technology shock with and without a public-employment response. Also compute the corresponding instantaneous multiplier. Impulse response functions are displayed in Figure 3. Instantaneous multiplier is displayed in Figure 4(b).
-* `plotcumulativeG.m` – Compute the cumulative multipliers corresponding to many technology shocks, both negative and positive. Cumulative multiplier is displayed in Figure 5.
++ `plotirfdispeG.m` – Compute the impulse response functions to a positive technology shock with and without a public-employment response. Also compute the corresponding instantaneous multiplier. Impulse response functions are displayed in Figure 2. Instantaneous multiplier is displayed in Figure 4(a).
++ `plotirfdisprG.m` – Compute the impulse response functions to a negative technology shock with and without a public-employment response. Also compute the corresponding instantaneous multiplier. Impulse response functions are displayed in Figure 3. Instantaneous multiplier is displayed in Figure 4(b).
++ `plotcumulativeG.m` – Compute the cumulative multipliers corresponding to many technology shocks, both negative and positive. Cumulative multiplier is displayed in Figure 5.
 
-The following Matlab script computes the cumulative multipliers that are discussed in Appendix B. This script calls the Dynare scripts that simulate the calibrated New Keynesian model in response to a given technology shock, with or without a public-employment response, when the underlying level of public employment is a constant fraction of private employment. 
+The following MATLAB script computes the cumulative multipliers that are discussed in Appendix B. This script calls the Dynare scripts that simulate the calibrated New Keynesian model in response to a given technology shock, with or without a public-employment response, when the underlying level of public employment is a constant fraction of private employment. 
 
-* `plotcumulativeB.m` – Compute cumulative multipliers when public employment is a constant fraction of private employment. Cumulative multipliers are displayed in Figure B1.
++ `plotcumulativeB.m` – Compute cumulative multipliers when public employment is a constant fraction of private employment. Cumulative multipliers are displayed in Figure B1.
 
 ## Software
 
 The results were obtained on a Mac running OS X Mountain Lion with the following software:
 
-* Matlab R2012a
-* Dynare 4.2.5
++ MATLAB R2012a
++ Dynare 4.2.5
 
 ## License
 
 The content of this repository is licensed under the terms of the MIT License.
+
+## Related Code
+
+The [Macroeconomic Model Database](https://www.macromodelbase.com) has developed [MATLAB and Dynare code](https://github.com/IMFS-MMB/mmb-rep/tree/master/NK_MI14) to reproduce Figure 2 and Figure 3.
+
+
+
+
