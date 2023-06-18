@@ -74,9 +74,9 @@ The results were obtained on a Mac running OS X Mountain Lion with the following
 
 The content of this repository is licensed under the terms of the MIT License.
 
-## Related Code
+## Related code
 
-The [Macroeconomic Model Database](https://www.macromodelbase.com) has developed [MATLAB and Dynare code](https://github.com/IMFS-MMB/mmb-rep/tree/master/NK_MI14) to reproduce Figure 2 and Figure 3.
++ [MATLAB and Dynare code to reproduce Figures 2 and 3](https://github.com/IMFS-MMB/mmb-rep/tree/master/NK_MI14) – Written by the [Macroeconomic Model Database](https://www.macromodelbase.com)
 
 
 
