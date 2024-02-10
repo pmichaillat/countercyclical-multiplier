@@ -1,7 +1,6 @@
 %=================================================================
-% calibrate the economic environment for the New Keynesian model
-% all parameters are computed at weekly frequency
-% created by pascal michaillat, london school of economics, on 03/10/2013
+% Calibrate the economic environment for the New Keynesian model
+% All parameters are computed at weekly frequency
 %=================================================================
 
 function [phirx,phix,phipix,Dx,sx,deltax,rx,omegahx,etax,alphax,omegax,gammax,R0x,rhoax,epsilonx,sigmaax,zetax,valgx]=SETUPB()

@@ -1,6 +1,4 @@
-
-// declare New Keynesian model with constant public employment
-// created by pascal michaillat, london school of economics, on 03/10/2013
+// Declare New Keynesian model with constant public employment
 
 // Endogenous variables
 var a c pie l n th R;

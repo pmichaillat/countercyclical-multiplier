@@ -1,7 +1,4 @@
-
-// declare New Keynesian model with constant public employment,  with government intervention
-// created by pascal michaillat, london school of economics, on 03/10/2013
-
+// Declare New Keynesian model with constant public employment,  with government intervention
 
 // Endogenous variables
 // Endogenous variables

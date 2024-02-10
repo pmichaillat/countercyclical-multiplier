@@ -1,7 +1,6 @@
 %==========================================================
 % Compute steady state of the calibrated New Keynesian model
 % ys: vector of steady-state values in endo_names order.
-% Created by Pascal Michaillat, London School of Economics, on 03/10/2013
 %==========================================================
 
 function [ys] = STEADYB()

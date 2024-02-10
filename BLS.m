@@ -1,7 +1,6 @@
 %==========================================================
 % calculate average of key variables in US data, 2001--2011
-% use these averages in calibration
-% created by pascal michaillat, london school of economics, on 03/10/2013
+% Use these averages in calibration
 %==========================================================
 
 function [u0,vu0,s,zeta,rhoa,sigmaa]=BLS()

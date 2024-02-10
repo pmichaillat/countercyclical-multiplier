@@ -1,8 +1,7 @@
 %%==============================================================================
-%% compute and display the cumulative public-employment multiplier over the business cycle
-% the multiplier is obtained from Dynare simulations of the calibrated New Keynesian model
-% the public-employment policy considered is that public employment remains a constant fraction of private employment in absence of government intervention 
-% created by pascal michaillat, london school of economics, on 03/10/2013
+%% Compute and display the cumulative public-employment multiplier over the business cycle
+%% The multiplier is obtained from Dynare simulations of the calibrated New Keynesian model
+%% The public-employment policy considered is that public employment remains a constant fraction of private employment in absence of government intervention 
 %%==============================================================================
 
 clear all;close all;

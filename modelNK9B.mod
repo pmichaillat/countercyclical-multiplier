@@ -1,6 +1,4 @@
-
-// declare New Keynesian model in which public employment is a constant fraction of private employment
-// created by pascal michaillat, london school of economics, on 03/10/2013
+// Declare New Keynesian model model in which public employment is a constant fraction of private employment
 
 // Endogenous variables
 var a c pie l n th R g;

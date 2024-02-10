@@ -1,10 +1,9 @@
 %%==============================================================================
-%% plot impulse response functions (IRFs) from the Dynare simulations of the calibrated New Keynesian model
-%% simulate expansions: the response of the economy to positive technology shocks
-%% plot two series of IRFs
+%% Plot impulse response functions (IRFs) from the Dynare simulations of the calibrated New Keynesian model
+%% Simulate expansions: the response of the economy to positive technology shocks
+%% Plot two series of IRFs
 %% (1) no government response: public employment remains constant over time
 %% (2) government intervention: the government increases public employment when the technology shock occurs
-% created by pascal michaillat, london school of economics, on 03/10/2013
 %%==============================================================================
 
 close all;clear all;
