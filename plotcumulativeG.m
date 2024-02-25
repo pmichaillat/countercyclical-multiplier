@@ -1,5 +1,5 @@
 %%==============================================================================
-%% compute and display the cumulative public-employment multiplier over the business cycle
+%% Compute and display the cumulative public-employment multiplier over the business cycle
 %% The multiplier is obtained from Dynare simulations of the calibrated New Keynesian model
 %% The public-employment policy considered is that public employment remains constant in absence of government intervention 
 %%==============================================================================
@@ -7,9 +7,9 @@
 clear all;close all;
 
 
-%%===================  simulate a series of IRFs, with and without government intervention, for a series of technology shocks  == 
+%% --- Simulate a series of IRFs, with and without government intervention, for a series of technology shocks  ---
 
-%start from most negative technology shock, without government intervention
+% Startfrom most negative technology shock, without government intervention
 dynare modelNKm13G
 perio=options_.periods;
 UN=ones(perio+2,1);%there is one lag and one lead
@@ -35,7 +35,7 @@ i=1;
 STOREIRF(:,:,i,1)=IRF;
 save(['storefileM.mat'],'STOREIRF','i');
 
-%compute effect of government intervention for the most negative shock
+% Compute effect of government intervention for the most negative shock
 dynare modelGm13G
 RES=oo_.endo_simul;
 IRF=RES(1:8,2:end-1);
@@ -43,7 +43,7 @@ load('storefileM.mat');
 STOREIRF(:,:,i,2)=IRF;
 save(['storefileM.mat'],'STOREIRF','i');
 
-%next technology shock, a bit less negative  
+% Next technology shock, a bit less negative  
 dynare modelNKm11G
 perio=options_.periods;
 UN=ones(perio+2,1);
@@ -77,7 +77,7 @@ load('storefileM.mat');
 STOREIRF(:,:,i,2)=IRF;
 save(['storefileM.mat'],'STOREIRF','i');
 
-%next technology shock, a bit less negative  
+% Next technology shock, a bit less negative  
 dynare modelNKm9G
 perio=options_.periods;
 UN=ones(perio+2,1);
@@ -111,7 +111,7 @@ load('storefileM.mat');
 STOREIRF(:,:,i,2)=IRF;
 save(['storefileM.mat'],'STOREIRF','i');
 
-%next technology shock, a bit less negative  
+% Next technology shock, a bit less negative  
 dynare modelNKm7G
 perio=options_.periods;
 UN=ones(perio+2,1);
@@ -145,7 +145,7 @@ load('storefileM.mat');
 STOREIRF(:,:,i,2)=IRF;
 save(['storefileM.mat'],'STOREIRF','i');
 
-%next technology shock, a bit less negative  
+% Next technology shock, a bit less negative  
 dynare modelNKm5G
 perio=options_.periods;
 UN=ones(perio+2,1);
@@ -179,7 +179,7 @@ load('storefileM.mat');
 STOREIRF(:,:,i,2)=IRF;
 save(['storefileM.mat'],'STOREIRF','i');
 
-%next technology shock, a bit less negative  
+% Next technology shock, a bit less negative  
 dynare modelNKm3G
 perio=options_.periods;
 UN=ones(perio+2,1);
@@ -213,7 +213,7 @@ load('storefileM.mat');
 STOREIRF(:,:,i,2)=IRF;
 save(['storefileM.mat'],'STOREIRF','i');
 
-%next technology shock, a bit less negative  
+% Next technology shock, a bit less negative  
 dynare modelNKm1G
 perio=options_.periods;
 UN=ones(perio+2,1);
@@ -247,7 +247,7 @@ load('storefileM.mat');
 STOREIRF(:,:,i,2)=IRF;
 save(['storefileM.mat'],'STOREIRF','i');
 
-%next technology shock, slightly positive  
+% Next technology shock, slightly positive  
 dynare modelNK1G
 perio=options_.periods;
 UN=ones(perio+2,1);
@@ -281,7 +281,7 @@ load('storefileM.mat');
 STOREIRF(:,:,i,2)=IRF;
 save(['storefileM.mat'],'STOREIRF','i');
 
-%next technology shock, a bit more positive
+% Next technology shock, a bit more positive
 dynare modelNK3G
 perio=options_.periods;
 UN=ones(perio+2,1);
@@ -315,7 +315,7 @@ load('storefileM.mat');
 STOREIRF(:,:,i,2)=IRF;
 save(['storefileM.mat'],'STOREIRF','i');
 
-%next technology shock, a bit more positive
+% Next technology shock, a bit more positive
 dynare modelNK5G
 perio=options_.periods;
 UN=ones(perio+2,1);
@@ -349,7 +349,7 @@ load('storefileM.mat');
 STOREIRF(:,:,i,2)=IRF;
 save(['storefileM.mat'],'STOREIRF','i');
 
-%next technology shock, a bit more positive
+% Next technology shock, a bit more positive
 dynare modelNK7G
 perio=options_.periods;
 UN=ones(perio+2,1);
@@ -383,7 +383,7 @@ load('storefileM.mat');
 STOREIRF(:,:,i,2)=IRF;
 save(['storefileM.mat'],'STOREIRF','i');
 
-%next technology shock, a bit more positive
+% Next technology shock, a bit more positive
 dynare modelNK9G
 perio=options_.periods;
 UN=ones(perio+2,1);
@@ -417,7 +417,7 @@ load('storefileM.mat');
 STOREIRF(:,:,i,2)=IRF;
 save(['storefileM.mat'],'STOREIRF','i');
 
-%next technology shock, a bit more positive
+% Next technology shock, a bit more positive
 dynare modelNK11G
 perio=options_.periods;
 UN=ones(perio+2,1);
@@ -451,7 +451,7 @@ load('storefileM.mat');
 STOREIRF(:,:,i,2)=IRF;
 save(['storefileM.mat'],'STOREIRF','i');
 
-%next technology shock, a bit more positive
+% Next technology shock, a bit more positive
 dynare modelNK13G
 perio=options_.periods;
 UN=ones(perio+2,1);
@@ -485,8 +485,7 @@ load('storefileM.mat');
 STOREIRF(:,:,i,2)=IRF;
 save(['storefileM.mat'],'STOREIRF','i');
 
-
-%next technology shock, a bit more positive
+% Next technology shock, a bit more positive
 dynare modelNK17G
 perio=options_.periods;
 UN=ones(perio+2,1);
@@ -520,7 +519,7 @@ load('storefileM.mat');
 STOREIRF(:,:,i,2)=IRF;
 save(['storefileM.mat'],'STOREIRF','i');
 
-%next technology shock, a bit more positive
+% Next technology shock, a bit more positive
 dynare modelNK21G
 perio=options_.periods;
 UN=ones(perio+2,1);
@@ -554,9 +553,10 @@ load('storefileM.mat');
 STOREIRF(:,:,i,2)=IRF;
 save(['storefileM.mat'],'STOREIRF','i');
 
-%========================   compute and plot multipliers over the business cycle ==============================   
+%% --- Compute and plot multipliers over the business cycle ---
+
 load('storefileM.mat');
-version='G_11102012';
+version='G';
 q=@(thx)omegah.*thx.^(-eta);
 
 apos=1;lpos=4;npos=5;thpos=6;gpos=8;upos=9;hgpos=10; ...
@@ -568,31 +568,30 @@ STOREIRF(upos,:,:,:)=1-(1-s).*STOREIRF(npos,:,:,:);
 STOREIRF(hgpos,2:end,:,:)=STOREIRF(gpos,2:end,:,:)-(1-s).*STOREIRF(gpos,1:end-1,:,:);
 STOREIRF(hgpos,1,:,:)=STOREIRF(gpos,1,:,:)-(1-s).*gss;
 
-%compute peak unemployment to measure size of shock
-numneg=7;%number of negative shocks
+% Compute peak unemployment to measure size of shock
+numneg=7; % Number of negative shocks
 maxx=squeeze(max(STOREIRF(upos,:,:,1),[],2));
 minx=squeeze(min(STOREIRF(upos,:,:,1),[],2));
 UNEMPx=[maxx(1:numneg);minx(numneg+1:end)]	
 
-%compute multiplier by cumulating number of worker*week in public sector and number of worker*week crowded out in private sector
-Gx=squeeze(sum(STOREIRF(gpos,:,:,1),2));%number of public employees*week	
-Gy=squeeze(sum(STOREIRF(gpos,:,:,2),2));%number of public employees*week
-Nx=squeeze(sum(STOREIRF(npos,:,:,1),2));%number of total employees*week before g
-Ny=squeeze(sum(STOREIRF(npos,:,:,2),2));%number of total employees*week after g
-Lx=squeeze(sum(STOREIRF(lpos,:,:,1),2));%number of total employees*week before g
-Ly=squeeze(sum(STOREIRF(lpos,:,:,2),2));%number of total employees*week after g
+% Compute multiplier by cumulating number of worker*week in public sector and number of worker*week crowded out in private sector
+Gx=squeeze(sum(STOREIRF(gpos,:,:,1),2)); % Public employees*week	
+Gy=squeeze(sum(STOREIRF(gpos,:,:,2),2)); % Public employees*week
+Nx=squeeze(sum(STOREIRF(npos,:,:,1),2)); % Total employees*week before g
+Ny=squeeze(sum(STOREIRF(npos,:,:,2),2)); % Total employees*week after g
+Lx=squeeze(sum(STOREIRF(lpos,:,:,1),2)); % Total employees*week before g
+Ly=squeeze(sum(STOREIRF(lpos,:,:,2),2)); % Total employees*week after g
 DG=Gy-Gx;
 DN=Ny-Nx;
 
-%compute real cost of employing public workers
+% Compute real cost of employing public workers
 FGx=(omega.*STOREIRF(apos,:,:,1).^gamma).*STOREIRF(gpos,:,:,1)+STOREIRF(hgpos,:,:,1).*r.*STOREIRF(apos,:,:,1)./q(STOREIRF(thpos,:,:,1));
 CGx=squeeze(sum(FGx,2));
 FGy=(omega.*STOREIRF(apos,:,:,2).^gamma).*STOREIRF(gpos,:,:,2)+STOREIRF(hgpos,:,:,2).*r.*STOREIRF(apos,:,:,2)./q(STOREIRF(thpos,:,:,2));
 CGy=squeeze(sum(FGy,2));
 DC=CGy-CGx;
 
-
-%plot results
+% Plot results
 xin=[5 6 7 8];
 new_xticks=['5%';'6%';'7%';'8%'];
 
@@ -621,5 +620,3 @@ set(gca,'xticklabel',new_xticks)
 ylabel('Cumulative multiplier','FontSize',22)
 saveas(gcf,['figures/CUMGDP_',version,'.fig'])
 print('-depsc',['graph/CUMGDP_',version,'.eps'])
-
-

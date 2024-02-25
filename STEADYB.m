@@ -1,7 +1,7 @@
-%==========================================================
-% Compute steady state of the calibrated New Keynesian model
-% ys: vector of steady-state values in endo_names order.
-%==========================================================
+%%==========================================================
+%% Compute steady state of the calibrated New Keynesian model
+%% ys: vector of steady-state values in endo_names order
+%%==========================================================
 
 function [ys] = STEADYB()
 	
